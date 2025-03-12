@@ -32,7 +32,7 @@ export default function AboutUs() {
               </p>
               <p className="text-lg text-gray-800 mt-4 leading-relaxed">
                Our modern fleet is regularly maintained to meet industry standards, allowing us to offer dependable and on-time deliveries. 
-              Whether you're looking to ship goods across the country or need specialized transport, LM United is here to meet your needs with professionalism and care.
+              Whether youre looking to ship goods across the country or need specialized transport, LM United is here to meet your needs with professionalism and care.
               </p>
         
               <p className="text-lg text-gray-800 mt-4 leading-relaxed font-semibold">

@@ -2,13 +2,6 @@
 import * as React from 'react';
 
 
-interface Card{
-    heading:string;
-    description:string;
-    image:string;
-    content:string
-}
-
 
 import { Card as MuiCard, CardMedia, CardContent, CardActions, Typography } from "@mui/material";
 
