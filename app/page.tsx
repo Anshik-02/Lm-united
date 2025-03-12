@@ -13,7 +13,7 @@ export default function Home() {
             Efficient Transport Solutions for <br className="hidden md:block" />
             Businesses Large and Small
           </h1>
-          <p className="font-extralight text-base text-gray-600 leading-6 mt-4">
+          <p className="font-extralight text-base text-gray-100 leading-6 mt-4">
             We believe in consistent service, on-time deliveries,
             <br className="hidden md:block" />
             and customer satisfaction. <br className="hidden md:block" />
