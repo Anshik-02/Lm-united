@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="flex flex-col gap-4 ml-20">
+        <div className="flex flex-col gap-4 ">
          <h2 className="font-bold text-2xl">Navigation</h2>
           <Link href={"/"}><p className="font-light text-lg">Home</p></Link>
           <Link href={"/aboutUs"}><p className="font-light text-lg">About Us</p></Link>
