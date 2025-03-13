@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
             <br className="hidden md:block" />
             transport from start to finish.
           </p>
-          <button className="rounded-lg bg-white px-7 py-3 mt-4 hover:brightness-75 text-black cursor-pointer">
+          <Link href={"/quote"}></Link><button className="rounded-lg bg-white px-7 py-3 mt-4 hover:brightness-75 text-black cursor-pointer">
             Get a Quote
           </button>
         </div>
@@ -111,9 +112,9 @@ export default function Home() {
             shipment.
           </p>
 
-          <button className="bg-[#1F2937] text-white mt-4 rounded-lg py-2 px-4 hover:brightness-75 cursor-pointer">
+         <Link href={"/aboutUs"}><button className="bg-[#1F2937] text-white mt-4 rounded-lg py-2 px-4 hover:brightness-75 cursor-pointer">
             About Us
-          </button>
+          </button></Link> 
         </div>
       </div>
       <div className=" w-full max-w-lg mt-10 bg-white z-10 text-center flex flex-col gap-2 p-6 shadow-lg rounded-lg md:hidden ">
@@ -128,10 +129,10 @@ export default function Home() {
           efficient transport solutions tailored to your needs. Secure packaging
           and timely delivery give you peace of mind with every shipment.
         </p>
-        <button className="bg-[#1F2937] text-white mt-4 rounded-lg py-2 px-4 hover:brightness-75 cursor-pointer">
+        <Link href={"/quote"}><button className="bg-[#1F2937] text-white mt-4 rounded-lg py-2 px-4 hover:brightness-75 cursor-pointer">
           
           GET A QUOTE
-        </button>
+        </button></Link>
       </div>
 
       <div className="w-full h-0.5 bg-black mt-10"></div>
