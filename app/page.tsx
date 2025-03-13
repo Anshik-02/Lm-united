@@ -22,9 +22,9 @@ export default function Home() {
             <br className="hidden md:block" />
             transport from start to finish.
           </p>
-          <Link href={"/quote"}></Link><button className="rounded-lg bg-white px-7 py-3 mt-4 hover:brightness-75 text-black cursor-pointer">
+          <Link href={"/quote"}><button className="rounded-lg bg-white px-7 py-3 mt-4 hover:brightness-75 text-black cursor-pointer">
             Get a Quote
-          </button>
+          </button></Link>
         </div>
         <Image
           src="/main.jpg"
@@ -97,9 +97,9 @@ export default function Home() {
             shipment.
           </p>
 
-          <button className="bg-[#1F2937] right-44 relative rounded-lg py-2 px-4 mt-20 hover:brightness-75 cursor-pointer ">
+          <Link href={"/aboutUs"}><button className="bg-[#1F2937] right-44 relative rounded-lg py-2 px-4 mt-20 hover:brightness-75 cursor-pointer ">
             About Us
-          </button>
+          </button></Link>
         </div>
         <div className="absolute w-full max-w-lg bg-white z-10 text-center flex flex-col gap-2 p-6 shadow-lg rounded-lg md:hidden ">
           <h2 className="font-semibold text-2xl text-black mt-4">
