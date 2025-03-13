@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     try {
       requestData = await req.json();
     } catch (err) {
-      return NextResponse.json({ error: "Invalid JSON format" }, { status: 400 });
+      return NextResponse.json({ error: "Invalid JSON format",err }, { status: 400 });
     }
 
     const { to, subject, html } = requestData;
