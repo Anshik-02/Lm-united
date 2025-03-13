@@ -99,7 +99,7 @@ export default function Quote() {
   const clickHandler = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await axios.post("http://localhost:3000/api/sendEmail", {
+    const response = await axios.post(`${process.env.NEXT_URL}/api/sendEmail`, {
       to: "anshik091@gmail.com",
       subject: "Quote Request",
       html: `<p>You have a new quote request:</p>
