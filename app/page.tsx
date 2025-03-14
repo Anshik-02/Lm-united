@@ -10,10 +10,10 @@ export default function Home() {
 
       <div className="relative">
         <div className=" hidden  md:block absolute top-80 left-1/2 transform -translate-x-1/2 text-center px-4">
-          <h1 className="font-bold text-3xl md:text-4xl">
+          <h2 className="font-bold text-3xl md:text-4xl">
             Efficient Transport Solutions for <br className="hidden md:block" />
             Businesses Large and Small
-          </h1>
+          </h2>
           <p className="font-extralight text-base text-gray-100 leading-6 mt-4">
             We believe in consistent service, on-time deliveries,
             <br className="hidden md:block" />
