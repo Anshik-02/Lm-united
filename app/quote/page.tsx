@@ -98,6 +98,22 @@ export default function Quote() {
 
   const clickHandler = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (
+      !Name ||
+      !Company_Name ||
+      !Phone ||
+      !Email
+) {
+      alert("Please fill in all fields before submitting.");
+      return; // Stop form submission
+    }
+
+
+
+
+
+
+
 
     const response = await axios.post(`/api/sendEmail`, {
       to: "anshik091@gmail.com",
