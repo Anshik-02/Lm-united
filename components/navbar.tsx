@@ -26,7 +26,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center h-full">
-        <h1 className="font-bold text-2xl text-black">LM UNITED</h1>
+        <Link href={"/"}><h1 className="font-bold text-2xl text-black">LM UNITED</h1></Link>
         <div className="hidden md:flex gap-7 items-center">
           <Link href={"/"}>
           <p className="font-light text-xl text-black cursor-pointer ">HOME</p></Link>
@@ -82,7 +82,7 @@ export function Navbar2() {
   return (
     <nav className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center h-20">
-        <h1 className="font-bold text-2xl text-black">LM UNITED</h1>
+      <Link href={"/"}> <h1 className="font-bold text-2xl text-black">LM UNITED</h1></Link>
 
      
         <div className="hidden md:flex gap-7 items-center">

@@ -35,7 +35,6 @@ export default function Home() {
         />
       </div>
 
-
       <div className="flex flex-col text-center mt-10 px-4">
         <h1 className="font-bold text-4xl text-black">LM UNITED</h1>
         <p className="font-light text-2xl text-black mt-2">
