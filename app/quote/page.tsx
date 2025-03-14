@@ -105,7 +105,7 @@ export default function Quote() {
       !Email
 ) {
       alert("Please fill in all fields before submitting.");
-      return; // Stop form submission
+      return; 
     }
 
 
@@ -116,7 +116,7 @@ export default function Quote() {
 
 
     const response = await axios.post(`/api/sendEmail`, {
-      to: "anshik091@gmail.com",
+      to: "info@lmunitedtransport.com",
       subject: "Quote Request",
       html: `<p>You have a new quote request:</p>
              <p><strong>Name:</strong> ${Name}</p>
