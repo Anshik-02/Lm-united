@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     try {
       requestData = await req.json();
     } catch (err) {
-      return NextResponse.json({ error: "Invalid JSON format",err }, { status: 400 });
+      return NextResponse.json({ error: "Invalid JSON format", err }, { status: 400 });
     }
 
     const { to, subject, html } = requestData;
@@ -35,8 +35,10 @@ export async function POST(req: Request) {
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: "Email sent successfully!" });
-  } catch (error: any) {
-    console.error("Error sending email:", error.message);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+    console.error("Error sending email:", errorMessage);
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }
+

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-import { Poppins } from "next/font/google";
 import Footer from "@/components/footer";
-import Head from "next/head";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +17,12 @@ const geistMono = Geist_Mono({
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
-
 export const metadata: Metadata = {
-  title: "Lm-united",
-  description: "Lmunited",
+  title: "LM United Transport | Reliable Logistics Solutions",
+  description: "Providing world-class transport and logistics solutions. Consistent service, on-time deliveries, and customer satisfaction.",
 };
 
 export default function RootLayout({
@@ -33,15 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <Head>
-        <link rel="icon" href="/favicon.ico" type="icon/ico" />
-      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins} antialiased ` }
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
       >
-        {children}
-        <Footer/>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
 }
+

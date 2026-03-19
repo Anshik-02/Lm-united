@@ -1,5 +1,4 @@
 "use client";
-import { Navbar2 } from "@/components/navbar";
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Radio from "@mui/material/Radio";
@@ -60,6 +59,7 @@ function BasicTextFields({ label, type, name, value, onChange }: TextProps) {
   );
 }
 
+
 export default function Quote() {
   const [form, setForm] = useState({
     Name: "",
@@ -103,17 +103,10 @@ export default function Quote() {
       !Company_Name ||
       !Phone ||
       !Email
-) {
+    ) {
       alert("Please fill in all fields before submitting.");
-      return; 
+      return;
     }
-
-
-
-
-
-
-
 
     const response = await axios.post(`/api/sendEmail`, {
       to: "info@lmunitedtransport.com",
@@ -137,122 +130,147 @@ export default function Quote() {
     } else {
       alert("Something went wrong, please try again.");
     }
-setForm(({
-  Name: "",
-  Company_Name: "",
-  Phone: "",
-  Email: "",
-  PickUp: "",
-  Datee: new Date().toISOString().slice(0, 16),
-  Pallets: "",
-  Weight: "",
-  Delivery_address: "",
-  Shipment_Type: "",
-  High_Value_Load: "",
-}))
+    setForm(({
+      Name: "",
+      Company_Name: "",
+      Phone: "",
+      Email: "",
+      PickUp: "",
+      Datee: new Date().toISOString().slice(0, 16),
+      Pallets: "",
+      Weight: "",
+      Delivery_address: "",
+      Shipment_Type: "",
+      High_Value_Load: "",
+    }))
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-      <Navbar2 />
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xl mt-18 mb-4">
-        <h2 className="text-2xl font-bold text-center mb-6 text-black">
-          Request a Quote
-        </h2>
+    <div className="bg-slate-50 min-h-screen py-24 md:py-32">
+      <div className="container mx-auto px-6">
+        <div className="bg-white shadow-2xl shadow-slate-200/50 rounded-[2.5rem] p-8 md:p-16 w-full max-w-2xl mx-auto border border-slate-100 overflow-hidden relative">
+          {/* Accent decoration */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-orange-500" />
 
-        <form className="flex flex-col gap-4">
-          <BasicTextFields
-            label="Name"
-            type="text"
-            name="Name"
-            value={Name}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Company Name"
-            type="text"
-            name="Company_Name"
-            value={Company_Name}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Phone"
-            type="tel"
-            name="Phone"
-            value={Phone}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Email"
-            type="email"
-            name="Email"
-            value={Email}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Pickup Address"
-            type="text"
-            name="PickUp"
-            value={PickUp}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Pick Date/Time"
-            type="datetime-local"
-            name="Datee"
-            value={Datee}
-            onChange={handleChange}
-          />
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+              Request a Quote
+            </h2>
+            <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full" />
+            <p className="mt-6 text-slate-500 font-light text-lg">
+              Fill out the form below and our team will get back to you with a tailored quote for your shipment.
+            </p>
+          </div>
 
-          <RadioButtonsGroup
-            label="Shipment Type"
-            name="Shipment_Type"
-            value="LTL"
-            value2="FTL"
-            selectedValue={Shipment_Type}
-            onChange={handleChange}
-          />
+          <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <BasicTextFields
+                label="Full Name"
+                type="text"
+                name="Name"
+                value={Name}
+                onChange={handleChange}
+              />
+              <BasicTextFields
+                label="Company Name"
+                type="text"
+                name="Company_Name"
+                value={Company_Name}
+                onChange={handleChange}
+              />
+            </div>
 
-          <BasicTextFields
-            label="Number of Pallets"
-            type="number"
-            name="Pallets"
-            value={Pallets}
-            onChange={handleChange}
-          />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <BasicTextFields
+                label="Phone Number"
+                type="tel"
+                name="Phone"
+                value={Phone}
+                onChange={handleChange}
+              />
+              <BasicTextFields
+                label="Email Address"
+                type="email"
+                name="Email"
+                value={Email}
+                onChange={handleChange}
+              />
+            </div>
 
-          <RadioButtonsGroup
-            label="High Value Load"
-            name="High_Value_Load"
-            value="Yes"
-            value2="No"
-            selectedValue={High_Value_Load}
-            onChange={handleChange}
-          />
+            <div className="space-y-6 pt-6 border-t  border-slate-100">
+              <div className="">
+                <BasicTextFields
+                label="Pickup Address"
+                type="text"
+                name="PickUp"
+                value={PickUp}
+                onChange={handleChange}
+              />
+                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <BasicTextFields
+                  label="Pickup Date/Time"
+                  type="datetime-local"
+                  name="Datee"
+                  value={Datee}
+                  onChange={handleChange}
+                />
+                <BasicTextFields
+                  label="Number of Pallets"
+                  type="number"
+                  name="Pallets"
+                  value={Pallets}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
 
-          <BasicTextFields
-            label="Weight (kg)"
-            type="number"
-            name="Weight"
-            value={Weight}
-            onChange={handleChange}
-          />
-          <BasicTextFields
-            label="Delivery Address"
-            type="text"
-            name="Delivery_address"
-            value={Delivery_address}
-            onChange={handleChange}
-          />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-4 px-6 bg-slate-50 rounded-2xl">
+              <RadioButtonsGroup
+                label="Shipment Type"
+                name="Shipment_Type"
+                value="LTL"
+                value2="FTL"
+                selectedValue={Shipment_Type}
+                onChange={handleChange}
+              />
+              <RadioButtonsGroup
+                label="High Value Load"
+                name="High_Value_Load"
+                value="Yes"
+                value2="No"
+                selectedValue={High_Value_Load}
+                onChange={handleChange}
+              />
+            </div>
 
-          <button
-            onClick={clickHandler}
-            className="bg-orange-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-orange-600 transition duration-200"
-          >
-            Submit
-          </button>
-        </form>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <BasicTextFields
+                label="Total Weight (kg)"
+                type="number"
+                name="Weight"
+                value={Weight}
+                onChange={handleChange}
+              />
+              <BasicTextFields
+                label="Delivery Address"
+                type="text"
+                name="Delivery_address"
+                value={Delivery_address}
+                onChange={handleChange}
+              />
+            </div>
+
+            <button
+              onClick={clickHandler}
+              className="mt-8 bg-orange-600 text-white font-bold py-5 px-8 rounded-2xl hover:bg-orange-700 transition duration-300 shadow-lg shadow-orange-900/20 active:scale-[0.98]"
+            >
+              SUBMIT QUOTE REQUEST
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
 }
+
