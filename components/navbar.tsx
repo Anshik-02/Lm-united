@@ -32,8 +32,8 @@ export default function Navbar() {
 
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center h-full">
         <Link href="/" className="relative flex items-center h-full transition-transform duration-300 hover:scale-105">
-          <span className="text-2xl font-black tracking-tighter text-slate-900 flex items-center gap-1 uppercase">
-            LM <span className="text-orange-600">United</span>
+          <span className="text-2xl font-black tracking-tighter text-[#9D0B16] flex items-center gap-1 uppercase">
+            LM United
           </span>
         </Link>
 
