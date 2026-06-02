@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -41,11 +41,11 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-orange-500 mt-1 shrink-0" size={18} />
-                <span className="text-sm"> Canada</span>
+                <span className="text-sm"> 8630 Brookville Rd ste 208, indianapolis IN 46239</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-orange-500 shrink-0" size={18} />
-                <a href="tel:+6479689114" className="text-sm hover:text-orange-500 transition-colors">647 968 9114</a>
+                <a href="tel:+13172235968" className="text-sm hover:text-orange-500 transition-colors">(317) 223 5968</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-orange-500 shrink-0" size={18} />

@@ -14,7 +14,7 @@ export default function ContactUs() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
             <a
-              href="tel:+6479689114"
+              href="tel:+13172235968"
               className="group flex flex-col items-center gap-4 p-8 rounded-3xl bg-slate-50 hover:bg-orange-50 transition-all duration-300 border border-transparent hover:border-orange-100"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
@@ -22,7 +22,7 @@ export default function ContactUs() {
               </div>
               <div>
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Phone</p>
-                <span className="text-slate-900 font-bold text-lg">647 968 9114</span>
+                <span className="text-slate-900 font-bold text-lg">(317) 223 5968</span>
               </div>
             </a>
 
